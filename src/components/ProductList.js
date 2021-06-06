@@ -13,7 +13,7 @@ const ProductList = () => {
   const SearchArray = products.filter(product => product.name.toUpperCase().includes(query.toUpperCase()))
     // console.log({SearchArray});
 
-  const productList = SearchArray.map((product) => (
+  const NewProductList = SearchArray.map((product) => (
     <ProductItem product={product} key={product.id} />
   ));
 
@@ -22,7 +22,7 @@ const ProductList = () => {
   return (
     <>
       <SearchBar setQuery={setQuery} />
-      <ListWrapper>{productList}</ListWrapper>
+      <ListWrapper>{NewProductList}</ListWrapper>
     </>
   );
 };
